@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reporte simple para listar Usuarios -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+                                  http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+              name="UsuariosReporte" 
+              pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d6b06f4a-936a-4cde-b2f6-9f30c9f37b3a">
+
+    <!-- Definir campos que coinciden con atributos de Usuario -->
+    <field name="id" class="java.lang.Long"/>
+    <field name="nombre" class="java.lang.String"/>
+    <field name="email" class="java.lang.String"/>
+
+    <!-- Título del reporte -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reporte de Usuarios]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Column headers -->
+    <columnHeader>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="50" height="20" />
+                <textElement textAlignment="Center" />
+                <textFieldExpression><![CDATA["ID"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="60" y="0" width="200" height="20" />
+                <textElement textAlignment="Center" />
+                <textFieldExpression><![CDATA["Nombre"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="0" width="285" height="20" />
+                <textElement textAlignment="Center" />
+                <textFieldExpression><![CDATA["Email"]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+
+    <!-- Detalle: valores de cada usuario -->
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="50" height="20" />
+                <textElement textAlignment="Center" />
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="60" y="0" width="200" height="20" />
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="0" width="285" height="20" />
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport>

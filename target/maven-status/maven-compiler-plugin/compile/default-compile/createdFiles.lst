@@ -1,0 +1,11 @@
+bean\PersonaController.class
+bean\PersonaFacade.class
+bean\util\JsfUtil.class
+bean\PersonaBean.class
+com\mycompany\crud3prueba\JAXRSConfiguration.class
+bean\AbstractFacade.class
+bean\PersonaController$PersonaControllerConverter.class
+modelo\Persona.class
+bean\util\PaginationHelper.class
+com\mycompany\crud3prueba\resources\JavaEE8Resource.class
+bean\PersonaController$1.class
